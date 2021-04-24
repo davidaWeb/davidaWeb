@@ -10,6 +10,7 @@ body{
     justify-content:center;
     align-items:center;
     min-height:100vh;
+    overflow: hidden;
 }
 
 .logo_img{
@@ -19,6 +20,7 @@ body{
     margin:0px auto 0px auto;
 }
 .accordion{
+    width:305px;
     max-width: 400px;
 }
 .accordion .content_box{
@@ -34,6 +36,7 @@ body{
     color:goldenrod;
     cursor:pointer;
     box-shadow:1px 1px 10px 2px #181818;
+    border:1px solid #181818;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     font-size:130%;
@@ -56,7 +59,7 @@ body{
     background-color: black;
     background-blend-mode: screen;
     overflow:hidden;
-    transition:0.65s;
+    transition:0.4s;
     overflow-y: hidden;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
