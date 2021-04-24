@@ -1,0 +1,81 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Lobster', cursive;
+}
+body{
+    background-image: url('img/bck.jpg');
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    overflow:auto;
+}
+
+.logo_img{
+    display:block;
+    width: 250px;
+    height: 250px;
+    margin:0px auto 0px auto;
+}
+.accordion{
+    width:305px;
+    max-width: 400px;
+}
+.accordion .content_box{
+    position:relative;
+    margin:10px 20px;
+}
+.accordion .content_box .label{
+    position:relative;
+    padding:10px;
+    background-image: url('img/texture1.png');
+    background-color:black;
+    background-blend-mode: screen;
+    color:goldenrod;
+    cursor:pointer;
+    box-shadow:1px 1px 10px 2px #181818;
+    border:1px solid #181818;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-size:130%;
+}
+.accordion .content_box .label::before{
+    content:"+";
+    position:absolute;
+    top:50;
+    right:10px;
+    transform:translateY(-50%);
+    font-size:130%;
+}
+.accordion .content_box.active .label::before{
+    content:"-";
+}
+.accordion .content_box .content{
+    height: 0px;
+    position:relative;
+    background-image:url('img/texture2.png');
+    background-color: black;
+    background-blend-mode: screen;
+    overflow:hidden;
+    transition:0.4s;
+    overflow-y: hidden;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.accordion .content_box.active .content{
+    height:auto;
+    padding:10px;
+}
+.table_con{
+    width:250px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 130%;
+    font-weight:300;
+    color:whitesmoke;
+    text-shadow:2px 4px 4px black;
+}
+.price_col{
+    color:darkgoldenrod;
+}
