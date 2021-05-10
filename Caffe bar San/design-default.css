@@ -52,8 +52,3 @@ button{
     border-top-right-radius: 20px;
     
 }
-button:hover{
-    box-shadow:1px 1px 10px 2px darkgoldenrod;
-    transform:scale(1.1,1.1);   
-    outline: none;
-}
