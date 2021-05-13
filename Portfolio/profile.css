@@ -1,0 +1,236 @@
+:root{
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1.5em;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 78px;
+    scroll-snap-type: y proximity;
+}
+body{
+    background-color: white;
+    display:grid;
+    grid-template-columns: 0.6fr 1fr 1fr 0.6fr;
+    grid-template-rows: 0.165fr 1fr 1fr 1fr 0.5fr;
+    grid-template-areas: 
+        "header header header header"
+        "img1 cont1 cont1 cont1"
+        "cont2 cont2 cont2 img2"
+        "img3 cont3 cont3 cont3"
+        "footer footer footer footer";
+    grid-gap:1em;
+    margin:0px;
+}
+
+/*>>>>>>>>>>>> HEADER <<<<<<<<<<< */
+
+h1{
+    font-family: 'Permanent Marker', cursive;
+}
+h2{
+    color:darkgoldenrod;
+    display: inline;
+    font-size: 25px;
+    font-weight: 100;
+}
+header{
+    grid-area:header;
+}
+.logo-img{
+    width: 50px;
+}
+nav{
+    background-color: black;
+    background-image: url('img/txt/txt6.png');
+    background-blend-mode: screen;
+    border-bottom: 2px solid darkgoldenrod;
+    width: 100%;
+    position:fixed;
+}
+.nav-list{
+    font-family: 'Comfortaa', cursive;
+    list-style-type: none;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin:0px;
+}
+.nav-item{
+    margin-right: 20px;
+    display:flex;
+    align-items: center;
+}
+.nav-item:first-child{
+    margin-right: auto;
+    margin-left: 0px;
+}
+.nav-item a{
+    text-decoration: none;
+    color:darkgoldenrod;
+    border:1px solid transparent;
+    border-radius: 30px;
+    padding: 7px;
+}
+.nav-item a:hover{
+    background-color:rgba(48, 47, 46, 50%);
+    transition: all .3s ease-in-out 0s;
+    padding:7px;
+}.nav-item a:active{
+    color:black;
+    border-radius: 30px;
+    padding:7px;
+    background-color: goldenrod;
+}
+
+/*>>>>>>>>>>>> MAIN CONTENT <<<<<<<<<<< */
+
+#img1, #con1, #img2, #con2, #img3, #con3{
+    scroll-snap-align: start;
+}
+#img1{
+    grid-area:img1;
+}
+#cont1{
+    grid-area:cont1;
+    border-bottom:1px solid dimgray;
+    text-align: justify;
+    margin-right: 5%;
+}
+#img2{
+    grid-area:img2;
+}
+#img2 img{
+    float:right;
+}
+#cont2{
+    grid-area:cont2;
+    border-bottom:1px solid dimgray;
+    margin-left: 5%;
+    text-align: justify;
+}
+#img3{
+    grid-area:img3;
+}
+#cont3{
+    grid-area:cont3;
+    text-align: justify;
+    margin-right: 5%;
+}
+
+/*>>>>>>>>>>>> FOOTER <<<<<<<<<<<*/
+
+footer{
+    background-color:black;
+    background-image: url('img/txt/txt6.png');
+    background-blend-mode: screen;
+    border-top:2px solid darkgoldenrod;
+    grid-area:footer;
+    text-align: center;
+}
+footer h1{
+    margin-top:4.5%;
+    font-weight: 100;
+    font-family: 'Comfortaa', cursive;
+    color:darkgoldenrod;
+    font-size: 30px;
+}
+/* >>>>>>> CONTACT <<<<<<<*/
+
+.contact .cont-btn{
+    display:inline-block;
+    width: 60px;
+    height: 60px;
+    margin:0 5px;
+    background:white;
+    border:2px solid darkgoldenrod;
+    border-radius: 50px;
+    cursor:pointer;
+    box-shadow:0px 10px 10px rgba(0,0,0,0.1);
+    transition:all 0.3s ease-out;
+    overflow: hidden;
+}
+
+/* CONTACT HOVER-TEXT AREA SIZE*/
+
+.contact .cont-btn:nth-child(1):hover{
+    width:280px; 
+}
+.contact .cont-btn:nth-child(2):hover{
+    width:280px;
+}
+.contact .cont-btn:nth-child(3):hover{
+    width:180px;
+}
+.contact .cont-btn:nth-child(4):hover{
+    width:200px;   
+}
+.contact .cont-btn:nth-child(5):hover{
+    width:180px;  
+}
+.contact .cont-btn .cont-icon{
+    display:inline;
+    height: 60px;
+    width: 60px;
+    border-radius:50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    float:left;
+}
+/* CONTACT HOVER-COLOR CHANGE */
+
+.contact .cont-btn:nth-child(1):hover .cont-icon{
+    background: linear-gradient(to right, #f85032, #e73827);
+}
+.contact .cont-btn:nth-child(2):hover .cont-icon{
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+}
+.contact .cont-btn:nth-child(3):hover .cont-icon{
+    background: linear-gradient(to bottom, #ee0979, #ff6a00);
+}
+.contact .cont-btn:nth-child(4):hover .cont-icon{
+    background: linear-gradient(to right, #aa076b, #61045f);
+}
+.contact .cont-btn:nth-child(5):hover .cont-icon{
+    background: linear-gradient(to right, #4b6cb7, #182848);
+}
+.contact .cont-btn .cont-icon svg{
+    width:60px;
+    height:60px;
+    line-height: 60px;
+}
+.contact .cont-btn:hover .cont-icon svg path{
+    fill:white;
+}
+.contact .cont-btn:hover .cont-icon svg circle{
+    fill:white;
+}
+.contact .cont-btn span{
+    font-family: 'Comfortaa', cursive;
+    font-size:20px;
+    font-weight: 500;
+    line-height: 60px;
+    text-align: center;
+    transition:all 0.3s ease-out;
+}
+.contact .cont-btn a{
+    text-decoration: none;
+    color:darkgoldenrod;
+}
+/* RESPONSIVE - MOBILE*/
+
+@media only screen and (max-width:550px){
+    body{
+        grid-template-columns:1fr;
+        grid-template-rows: 0.2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+        grid-template-areas:
+        "header"
+        "img1"
+        "cont1"
+        "img2"
+        "cont2"
+        "img3"
+        "cont3"
+        "footer"
+        ;
+    }
+}
