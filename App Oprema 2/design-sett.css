@@ -1,0 +1,140 @@
+.container{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1.5fr 1.2fr 0.5fr;
+    grid-template-areas:
+        "nav nav nav nav"
+        " main main main sidebar"
+        " main main main sidebar"
+        " main main main sidebar";
+    grid-gap:0.3rem;
+    font-family: 'Varela Round', sans-serif;
+    font-size:30px;
+    font-weight: 300;
+    text-align: left;
+}
+main{
+    background:whitesmoke;
+    grid-area:main;
+    border:1px solid black;
+    box-shadow: 1px 1px 30px 1px #404040;
+}
+#sidebar{
+    background:whitesmoke;
+    border:1px solid black;
+    grid-area:sidebar;
+    box-shadow: 1px 1px 30px 1px #404040;
+}
+
+/*FOR MOBILE VIEW*/
+
+@media only screen and (max-width:550px){
+    .container{
+        grid-template-columns:1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr;
+        grid-template-areas:
+        "nav"
+        "main"
+        "sidebar"
+        ;
+    }
+}
+
+/* TABLE THEME */
+
+.table-sett{
+    width: 100%;
+    font-size:20px;
+    border-collapse: collapse;
+    padding-top:10px;
+}
+.table-sett td{
+    padding:5px 5px 0px 0px;
+    font-family:'Courier New', Courier, monospace;
+}
+.table-sett tr td{ 
+    padding-top:15px;
+    padding-bottom: 15px;
+}
+.table-sett th{
+    height: 40px;
+    border-bottom: 1px solid black;
+    color:whitesmoke;
+    text-shadow:2px 4px 4px black;
+    font-weight: 100;
+}
+.table-sett tr th:first-child{   
+    padding-left: 20px;
+}
+.table-sett select{
+    width:200px;
+    height: 50px;
+    display:block;
+    margin-left:5%;
+    font-family: 'Varela Round', sans-serif;
+    font-size:20px;
+}
+.table-sett select option{
+    font-family: 'Varela Round', sans-serif;
+    font-size:20px;
+}
+/* TABLE LANGUAGE*/
+
+.table-lang{
+    width: 102.8%;
+    font-size:20px;
+    border-collapse: collapse;
+    padding-top:10px;
+}
+.table-lang td{
+    padding:5px 5px 0px 0px;
+    font-family:'Courier New', Courier, monospace;
+}
+.table-lang tr td{ 
+    padding-top:15px;
+    padding-bottom: 15px;
+}
+.table-lang th{
+    height: 40px;
+    border-bottom: 1px solid black;
+    color:whitesmoke;
+    text-shadow:2px 4px 4px black;
+    font-weight: 100;
+}
+.table-lang tr th:first-child{   
+    padding-left: 20px;
+}
+.table-lang select{
+    width:200px;
+    height: 50px;
+    display:block;
+    margin:0px auto 0px auto;
+    font-family: 'Varela Round', sans-serif;
+    font-size:20px;
+}
+.table-lang select option{
+    font-family: 'Varela Round', sans-serif;
+    font-size:20px;
+}
+input[type="submit"]{
+    width: 100px;
+    height: 50px;
+    display:block;
+    margin:5% auto 0% auto;
+    border-radius: 30px;
+    border:0.5px solid rgb(216, 215, 215);
+    background-color: rgb(235, 230, 230);
+    font-family: 'Varela Round', sans-serif;
+}
+input[type="submit"]:hover{
+    border:0.5px solid darkslategrey;
+    font-weight: bold;
+}
+
+    
+
+
+    
+
+
+

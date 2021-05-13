@@ -1,0 +1,210 @@
+.container{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1.5fr 1.2fr 0.5fr;
+    grid-template-areas:
+        "nav nav nav nav"
+        " main main main sidebar"
+        " main main main sidebar"
+        " main main main sidebar";
+    grid-gap:0.3rem;
+    font-family: 'Varela Round', sans-serif;
+    font-size:30px;
+    font-weight: 300;
+    text-align: left;
+}
+main{
+    background:whitesmoke;
+    grid-area:main;
+    border:1px solid black;
+    box-shadow: 1px 1px 30px 1px #404040;
+}
+#sidebar{
+    background:whitesmoke;
+    border:1px solid black;
+    grid-area:sidebar;
+    box-shadow: 1px 1px 30px 1px #404040;
+}
+
+/* TABLE DEVICES*/
+
+.table-dev{
+    width: 100%;
+    font-size:20px;
+    border-collapse: collapse;
+}
+.table-dev td{
+    padding:5px 5px 0px 0px;
+    font-family:'Courier New', Courier, monospace;
+}
+.table-dev th{
+    height: 40px;
+    border-bottom: 1px solid black;
+    color:whitesmoke;
+    text-shadow:2px 4px 4px black;
+    font-weight: 100;
+}
+.table-dev tr td:first-child{   
+    padding-left: 10px;
+}
+.table-dev tr th:first-child{   
+    padding-left: 10px;
+}
+.table-dev tr:nth-child(even){
+    background-color: #E0E0E0;
+}
+
+/*TABLE DEVICES ACTION*/
+
+.table-dev-action{
+    width: 100.1%;
+    font-size:20px;
+    border-collapse: collapse;
+    padding-top:10px;
+}
+.table-dev-action th{
+    height: 40px;
+    border-bottom: 1px solid black;
+    color:whitesmoke;
+    text-shadow:2px 4px 4px black;
+    font-weight: 100;
+}
+.table-dev-action tr th:first-child{   
+    padding-left: 10px;
+}
+.table-dev-action tr td{ 
+    padding-bottom:20px;
+}
+.action-img{
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn-action{
+    width: 100px;
+    height: 50px;
+    border-radius: 30px;
+    border:0.5px solid rgb(216, 215, 215);
+    background-color: rgb(235, 230, 230);
+    font-family: 'Varela Round', sans-serif;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn-action:hover{
+    border:0.5px solid darkslategrey;
+    font-weight: bold;
+}
+
+/*TABLE DEVICES ACTION ADD*/
+
+.form-text{
+    font-size: 20px;
+    line-height: 0%;
+    text-align: center;
+}
+.table-dev-add{
+    display:none;
+    width: 100%;
+    font-size:20px;
+    border-collapse: collapse;
+    padding-top:10px;
+}
+.table-dev-add th{
+    height: 40px;
+    border-bottom: 1px solid black;
+    color:whitesmoke;
+    text-shadow:2px 4px 4px black;
+    font-weight: 100;
+}
+.table-dev-add tr th:first-child{   
+    padding-left: 10px;
+}
+.table-dev-add tr td{ 
+    padding-bottom:20px;
+}
+.dev-type-select{
+    display:block;
+    width:185px;
+    margin:0 auto 0 auto;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 18px;
+}
+
+/*TABLE EMPLOYEES ACTION REMOVE*/
+
+.table-dev-remove{
+    display:none;
+    width: 100.1%;
+    font-size:20px;
+    border-collapse: collapse;
+    padding-top:10px;
+}
+.table-dev-remove th{
+    height: 40px;
+    border-bottom: 1px solid black;
+    color:whitesmoke;
+    text-shadow:2px 4px 4px black;
+    font-weight: 100;
+}
+.table-dev-remove tr th:first-child{   
+    padding-left: 10px;
+}
+.table-dev-remove tr td{ 
+    padding-bottom:20px;
+}
+.dev-rem-select{
+    display:block;
+    margin:0 auto 0 auto;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 15px;
+}
+
+input[type="text"]{
+    display:block;
+    margin:0 auto 0 auto;
+    font-family: 'Varela Round', sans-serif;
+    font-size:15px;
+}
+input[type="submit"]{
+    width: 100px;
+    height: 50px;
+    display:block;
+    margin:5% auto 0% auto;
+    border-radius: 30px;
+    border:0.5px solid rgb(216, 215, 215);
+    background-color: rgb(235, 230, 230);
+    font-family: 'Varela Round', sans-serif;
+}
+input[type="submit"]:hover{
+    border:0.5px solid darkslategrey;
+    font-weight: bold;
+}
+.button-back{
+    width:50px;
+    height: 50px;
+    background:transparent;
+    border:none;
+}
+.button-back img{
+    width:35px;
+    height:35px;
+}
+.button-back img:hover{
+    transform: translate(-20%);
+}
+
+/******* FOR MOBILE VIEW ********/
+
+@media only screen and (max-width:550px){
+    .container{
+        grid-template-columns:1fr;
+        grid-template-rows: 0.4fr 0.8fr 0.3fr;
+        grid-template-areas:
+        "nav"
+        "main"
+        "sidebar"
+        ;
+    }
+}
